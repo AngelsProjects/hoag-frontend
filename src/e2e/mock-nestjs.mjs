@@ -52,7 +52,7 @@ const DATA_BY_PATH = {
   '/src/components': MOCK_COMPONENTS_CHILDREN,
 }
 
-const PORT = 3001
+const PORT = 4000
 
 const server = http.createServer((req, res) => {
   const baseUrl = `http://localhost:${PORT}`
