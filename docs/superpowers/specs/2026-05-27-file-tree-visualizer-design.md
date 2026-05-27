@@ -156,7 +156,7 @@ interface ApiResponse {
 
 **Required env var:**
 ```
-NESTJS_API_URL=http://localhost:3001
+NESTJS_API_URL=http://localhost:4000
 ```
 
 ### Error Handling Matrix

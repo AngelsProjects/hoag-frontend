@@ -15,7 +15,7 @@ export default defineConfig({
     {
       // Mock NestJS must start first so Next.js SSR can reach it during dev startup
       command: 'node src/e2e/mock-nestjs.mjs',
-      url: 'http://localhost:3001/files',
+      url: 'http://localhost:4000/files',
       reuseExistingServer: !process.env.CI,
       env: {},
     },
@@ -24,7 +24,7 @@ export default defineConfig({
       url: 'http://localhost:3000',
       reuseExistingServer: !process.env.CI,
       env: {
-        NESTJS_API_URL: 'http://localhost:3001',
+        NESTJS_API_URL: 'http://localhost:4000',
       },
     },
   ],

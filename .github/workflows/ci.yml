@@ -13,7 +13,7 @@ jobs:
     timeout-minutes: 15
 
     env:
-      NESTJS_API_URL: http://localhost:3001
+      NESTJS_API_URL: http://localhost:4000
 
     steps:
       - uses: actions/checkout@v4
@@ -49,7 +49,7 @@ jobs:
     needs: ci
 
     env:
-      NESTJS_API_URL: http://localhost:3001
+      NESTJS_API_URL: http://localhost:4000
 
     steps:
       - uses: actions/checkout@v4

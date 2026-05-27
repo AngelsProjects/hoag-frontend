@@ -116,7 +116,7 @@ Open `package.json` and add to `"scripts"`:
 - [ ] **Step 7: Create .env.local**
 
 ```bash
-echo "NESTJS_API_URL=http://localhost:3001" > .env.local
+echo "NESTJS_API_URL=http://localhost:4000" > .env.local
 ```
 
 - [ ] **Step 8: Verify setup compiles**
