@@ -1,0 +1,14 @@
+Create a nextjs app with access to a nestjs backend api.
+
+this nextjs will be focused on just showing a folder structure based on the
+backend results.
+
+technologies to use:
+- nextjs V16
+- Nodejs v24
+- tailwindscss
+- framer motion
+
+Nice to have:
+- vitest
+- e2e tests with playwright
