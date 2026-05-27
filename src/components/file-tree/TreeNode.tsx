@@ -10,11 +10,12 @@ import type { FileNode } from '@/types/file-tree'
 interface TreeNodeProps {
   node: FileNode
   depth: number
+  initialChildren?: FileNode[]
 }
 
-export function TreeNode({ node, depth }: TreeNodeProps) {
+export function TreeNode({ node, depth, initialChildren }: TreeNodeProps) {
   const { isOpen, toggle } = useTreeState()
-  const { children, isLoading, hasError, fetch, refetch } = useNodeChildren(node.path)
+  const { children, isLoading, hasError, fetch, refetch } = useNodeChildren(node.path, initialChildren ?? node.children)
   const open = isOpen(node.path)
 
   if (node.type === 'file') {

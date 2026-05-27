@@ -10,8 +10,14 @@ interface TreeStateContextValue {
 
 const TreeStateContext = createContext<TreeStateContextValue | null>(null)
 
-export function TreeStateProvider({ children }: { children: React.ReactNode }) {
-  const [openPaths, setOpenPaths] = useState<Set<string>>(new Set())
+export function TreeStateProvider({
+  children,
+  initialOpen = [],
+}: {
+  children: React.ReactNode
+  initialOpen?: string[]
+}) {
+  const [openPaths, setOpenPaths] = useState<Set<string>>(new Set(initialOpen))
 
   const toggle = useCallback((path: string) => {
     setOpenPaths(prev => {

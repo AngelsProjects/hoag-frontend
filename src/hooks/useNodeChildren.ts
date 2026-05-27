@@ -10,8 +10,8 @@ interface NodeChildrenState {
   refetch: () => void
 }
 
-export function useNodeChildren(path: string): NodeChildrenState {
-  const [children, setChildren] = useState<FileNode[] | null>(null)
+export function useNodeChildren(path: string, initialChildren?: FileNode[]): NodeChildrenState {
+  const [children, setChildren] = useState<FileNode[] | null>(initialChildren ?? null)
   const [isLoading, setIsLoading] = useState(false)
   const [hasError, setHasError] = useState(false)
 
