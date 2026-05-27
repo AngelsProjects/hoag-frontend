@@ -23,15 +23,6 @@ const MOCK_SRC_CHILDREN = {
   ],
 }
 
-const MOCK_COMPONENTS_CHILDREN = {
-  name: 'components',
-  type: 'dir',
-  path: '/src/components',
-  children: [
-    { name: 'Button.tsx', type: 'file', path: '/src/components/Button.tsx' },
-  ],
-}
-
 /**
  * Happy-path tests rely on the mock NestJS server (mock-nestjs.mjs) that
  * playwright.config.ts starts alongside `pnpm dev`.  Client-side child
@@ -44,10 +35,6 @@ const MOCK_COMPONENTS_CHILDREN = {
 
 const srcRoute = (url: URL) =>
   url.pathname === '/api/files' && url.searchParams.get('path') === '/src'
-
-const componentsRoute = (url: URL) =>
-  url.pathname === '/api/files' &&
-  url.searchParams.get('path') === '/src/components'
 
 test('root tree renders on load', async ({ page }) => {
   await page.goto('/')

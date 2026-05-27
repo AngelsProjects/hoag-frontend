@@ -11,12 +11,6 @@ function wrap(ui: React.ReactElement) {
 
 const fileNode: FileNode = { name: 'index.ts', type: 'file', path: '/src/index.ts' }
 const folderNode: FileNode = { name: 'src', type: 'dir', path: '/src' }
-const folderWithChildren: FileNode = {
-  name: 'src',
-  type: 'dir',
-  path: '/src',
-  children: [fileNode],
-}
 
 describe('TreeNode — file', () => {
   it('renders file name', () => {

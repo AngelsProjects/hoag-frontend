@@ -1,5 +1,5 @@
 import { describe, it, expectTypeOf } from 'vitest'
-import type { NodeType, FileNode, ApiResponse } from '@/types/file-tree'
+import type { FileNode, ApiResponse } from '@/types/file-tree'
 
 describe('FileNode', () => {
   it('accepts dir with children', () => {
